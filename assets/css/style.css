@@ -1,0 +1,396 @@
+@font-face {
+    font-family: "Overpass";
+    src: url(/assets/fonts/Overpass/Overpass-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url(/assets/fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font-family */
+body h1,
+h2,
+h3,
+h4 {
+    font-family: "Overpass";
+}
+
+body p {
+    font-family: "Overpass";
+    font-weight: 300;
+}
+
+img,
+input {
+    width: 100%;
+}
+
+/* l'image du header */
+#headerimg {
+    height: 72vh;
+
+    background-color: hsl(0deg 100% 68.91%);
+    background-image: url(/assets/img/bg-pattern-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 33% 37%;
+    border-bottom-left-radius: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    position: relative;
+    /* display: flex; */
+
+}
+
+/* Menu du burger */
+
+nav label img {
+    cursor: pointer;
+}
+
+/* input chekbox caché */
+#burger {
+    display: none;
+}
+
+#burger:checked~#navbar {
+    transition: all 0.7s;
+    min-height: 250px;
+}
+
+#navbar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 0px;
+    overflow: hidden;
+    max-height: 0px;
+    height: 600px;
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#navbar li {
+    /* display: none; */
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    width: 1vw;
+}
+
+#signup {
+    border-radius: 20px;
+    border-left: solid hsl(0deg 100% 68.91%) 20px;
+    border-right: solid hsl(0deg 100% 68.91%) 20px;
+    border-top: solid hsl(0deg 100% 68.91%) 10px;
+    border-bottom: solid hsl(0deg 100% 68.91%) 10px;
+    background-color: hsl(0deg 100% 68.91%);
+    color: white;
+}
+
+/* header */
+header {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+}
+
+header h1 {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: xx-large;
+    text-align: center;
+    width: 85%;
+}
+
+header p {
+    margin-bottom: 3rem;
+    width: 80%;
+}
+
+header h1,
+header p {
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+
+header #startlearn {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
+header #startlearn p {
+    padding: 0.5rem;
+    border: solid white;
+    border-radius: 45px 45px 45px 45px;
+    width: 43%;
+    font-weight: 400;
+}
+
+#start {
+    background-color: white;
+    color: hsl(13, 100%, 72%);
+}
+
+#logo {
+    margin-top: 10%;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo #blogr {
+    width: 80px;
+}
+
+#logo burger {
+    width: 10%;
+    height: 50%;
+}
+
+/* block1 avec image editor mobile */
+#block1,
+#block1 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#block1 h2 {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+#block1 h3 {
+    margin-bottom: 1rem;
+    width: 60%;
+    text-align: center;
+    font-size: x-large;
+}
+
+#block1 #text {
+    width: 90%;
+    margin-top: 3rem;
+    margin-bottom: 15rem;
+}
+
+#block1 p {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    width: 94%;
+}
+
+/* block2 */
+#block2 {
+    height: 74vh;
+    background-image: url(/assets/img/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(237, 17%, 21%);
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    background-size: 600px;
+    background-position: center -16rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#block2 img {
+    position: absolute;
+    top: -11rem;
+    left: 0;
+    max-width: 375px;
+}
+
+#text2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 84%;
+    color: white;
+}
+
+#text2 h2 {
+    font-size: xx-large;
+    margin-bottom: 2rem;
+    width: 93%;
+}
+
+#text2 p {
+    width: 93%;
+}
+
+/* Je n'ai pas trouver pour réduire le gras du texte */
+/* font-weight: 100; sur p ne fonctionne pas. */
+/* Block3 */
+#text3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+#text3 h3 {
+    font-size: x-large;
+    width: 85%;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#text3 p {
+    width: 85%;
+}
+
+/* footer */
+footer {
+    border-top-right-radius: 95px;
+    background-color: hsl(237, 17%, 21%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer img {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+footer div {
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+footer h4 {
+    margin-bottom: 1.5rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 1440px) {
+    #block1 {
+        overflow: hidden;
+    }
+
+    #block1imgtext {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+    }
+
+    #block1 img {
+        content: url(/assets/img/illustration-editor-desktop.svg);
+        position: absolute;
+        width: 55%;
+        left: 955px;
+        bottom: 44px;
+    }
+
+    #block1 #text {
+        width: 35%;
+        margin-left: -50rem;
+    }
+
+    #block1 #text p {
+        text-align: start;
+    }
+
+    #block1 #text h3 {
+        width: 94%;
+        text-align: start;
+    }
+
+    #block2 {
+        max-height: 400px;
+        padding-right: +13%;
+        align-items: flex-end;
+        background-position-x: left;
+    }
+
+    #text3 {
+        width: 40%;
+        text-align: start;
+        margin-right: -43rem;
+    }
+
+    #block3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        position: relative;
+    }
+
+    #block3 img {
+        content: url(/assets/img/illustration-laptop-desktop.svg);
+        position: absolute;
+        width: 55%;
+        left: -236px;
+        bottom: 103px;
+    }
+
+    #text2 {
+        max-width: 500px;
+        text-align: start
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    footer div {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+    }
+
+    footer img {
+        margin-top: 0rem;
+    }
+
+    #block2 img {
+        top: -4rem;
+        max-width: 528px;
+    }
+
+    #logo {
+        margin-top: 4%;
+        width: 100%;
+    }
+}
